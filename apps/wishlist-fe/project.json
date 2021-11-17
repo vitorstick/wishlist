@@ -1,0 +1,72 @@
+{
+  "root": "apps/wishlist-fe",
+  "sourceRoot": "apps/wishlist-fe/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/wishlist-fe",
+        "index": "apps/wishlist-fe/src/index.html",
+        "baseHref": "/",
+        "main": "apps/wishlist-fe/src/main.tsx",
+        "polyfills": "apps/wishlist-fe/src/polyfills.ts",
+        "tsConfig": "apps/wishlist-fe/tsconfig.app.json",
+        "assets": [
+          "apps/wishlist-fe/src/favicon.ico",
+          "apps/wishlist-fe/src/assets"
+        ],
+        "styles": ["apps/wishlist-fe/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/wishlist-fe/src/environments/environment.ts",
+              "with": "apps/wishlist-fe/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "wishlist-fe:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "wishlist-fe:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/wishlist-fe/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/wishlist-fe"],
+      "options": {
+        "jestConfig": "apps/wishlist-fe/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "wishlist-fe": "apps/wishlist-fe",
+    "wishlist-fe-e2e": "apps/wishlist-fe-e2e"
+  }
+}

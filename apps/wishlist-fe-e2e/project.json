@@ -1,0 +1,28 @@
+{
+  "root": "apps/wishlist-fe-e2e",
+  "sourceRoot": "apps/wishlist-fe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/wishlist-fe-e2e/cypress.json",
+        "devServerTarget": "wishlist-fe:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "wishlist-fe:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/wishlist-fe-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["wishlist-fe"]
+}
