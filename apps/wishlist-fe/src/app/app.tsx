@@ -1,4 +1,5 @@
 import styles from './app.module.scss';
+import { ItemDetail } from '@wishlist/ui';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
@@ -6,6 +7,9 @@ import star from './star.svg';
 export function App() {
   return (
     <div className={styles.app}>
+      <div className="main">
+        <ItemDetail></ItemDetail>
+      </div>
       <header className="flex">
         <Logo width="75" height="75" />
         <h1>Welcome to wishlist-fe!</h1>

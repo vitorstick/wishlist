@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "ui": "libs/ui",
     "wishlist-fe": "apps/wishlist-fe",
     "wishlist-fe-e2e": "apps/wishlist-fe-e2e"
   }
