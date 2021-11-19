@@ -1,0 +1,23 @@
+.product__item {
+  display: flex;
+
+  .product__link-image-container {
+    position: relative;
+    margin-bottom: 33px;
+  }
+
+  .product__title {
+    font-family: Work Sans,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: normal;
+    color: #0d3753;
+    margin-bottom: 0;
+    word-break: break-word;
+    padding-bottom: 13px;
+    white-space: nowrap!important;
+}
+}
