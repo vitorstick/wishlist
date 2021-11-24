@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "domain": "libs/domain",
     "ui": "libs/ui",
+    "wishlist": "libs/wishlist",
     "wishlist-fe": "apps/wishlist-fe",
     "wishlist-fe-e2e": "apps/wishlist-fe-e2e"
   }

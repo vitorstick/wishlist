@@ -1,0 +1,23 @@
+{
+  "root": "libs/wishlist",
+  "sourceRoot": "libs/wishlist/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/wishlist/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/wishlist"],
+      "options": {
+        "jestConfig": "libs/wishlist/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
