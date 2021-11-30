@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@wishlist/domain": ["libs/domain/src/index.ts"],
+      "@wishlist/not-found": ["libs/not-found/src/index.ts"],
       "@wishlist/ui": ["libs/ui/src/index.ts"],
       "@wishlist/wishlist": ["libs/wishlist/src/index.ts"]
     }

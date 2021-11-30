@@ -1,16 +1,25 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import styles from './app.module.scss';
 import { Header } from '@wishlist/ui';
 import { Wishlist } from '@wishlist/wishlist';
-
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
+import { NotFound } from '@wishlist/not-found';
 
 export function App() {
   return (
     <div className={styles.app}>
-      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <Header></Header>
-        <Wishlist></Wishlist>
+      <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+        <Router>
+          <Header></Header>
+          <div className="border-t border-gray-200 p-8">
+            <Routes>
+              <Route path="/" element={<Wishlist />} />
+              <Route path="/vitor" element={<Wishlist />} />
+              <Route path="/:name" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        </Router>
       </div>
       {/* <main>
         <details open>

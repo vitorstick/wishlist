@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "domain": "libs/domain",
+    "not-found": "libs/not-found",
     "ui": "libs/ui",
     "wishlist": "libs/wishlist",
     "wishlist-fe": "apps/wishlist-fe",

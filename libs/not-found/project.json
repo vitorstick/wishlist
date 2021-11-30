@@ -1,0 +1,23 @@
+{
+  "root": "libs/not-found",
+  "sourceRoot": "libs/not-found/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/not-found/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/not-found"],
+      "options": {
+        "jestConfig": "libs/not-found/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
