@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build --base-href https://https://vitorstick.github.io/wishlist/",
     "deploy": "gh-pages -d dist/apps/wishlist-fe",
-    "build": "nx build",
+    "build": "nx build --base-href https://https://vitorstick.github.io/wishlist/",
     "test": "nx test"
   },
   "private": true,

@@ -13,7 +13,7 @@ export function App() {
           <Header></Header>
           <div className="border-t border-gray-200 p-8">
             <Routes>
-              <Route path="/wishlist" element={<Wishlist />} />
+              <Route path="/" element={<Wishlist />} />
               <Route path="/vitor" element={<Wishlist />} />
               <Route path="/:name" element={<NotFound />} />
               <Route path="*" element={<NotFound />} />
