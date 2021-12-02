@@ -1,13 +1,13 @@
 {
   "name": "wishlist",
-  "homepage": "https://https://vitorstick.github.io/wishlist/",
+  "homepage": "https://vitorstick.github.io/wishlist/",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "predeploy": "npm run build --base-href https://https://vitorstick.github.io/wishlist/",
+    "predeploy": "npm run build --base-href https://vitorstick.github.io/wishlist/",
     "deploy": "gh-pages -d dist/apps/wishlist-fe",
-    "build": "nx build --base-href https://https://vitorstick.github.io/wishlist/",
+    "build": "nx build --base-href https://vitorstick.github.io/wishlist/",
     "test": "nx test"
   },
   "private": true,
